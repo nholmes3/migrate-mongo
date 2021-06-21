@@ -63,6 +63,7 @@ program
   .command("up")
   .description("run all pending database migrations")
   .option("-f --file <file>", "use a custom config file")
+  .option("-b --before <date>", "run only migrations before specified date")
   .action(options => {
     global.options = options;
     migrateMongo.database
